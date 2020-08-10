@@ -24,8 +24,7 @@ Iniciar o server
 
 ``Product, Store e StockItem``
 
-##### Produto
-
+#### Produto
 
 ```bash
 POST /products - criar
@@ -34,7 +33,7 @@ GET /products/:id - pesquisar
 DELETE /products/:id - deletar
 ```
 
-`
+```bash
 {
   "product": {
     "name": "string",
@@ -42,10 +41,9 @@ DELETE /products/:id - deletar
     "price": decimal,
   }
 }
-`
+```
 
 ### Deploy
-
 
 
 # Desafio Nexaas para desenvolvedor(a) em Ruby
