@@ -15,6 +15,7 @@ class StockItemsController < ApplicationController
       :product_id,
       :store_id,
       :transaction,
-      :quantity)
+      :quantity
+    )
   end
 end

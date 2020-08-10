@@ -1,12 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe 'StockItem', type: :request do
-
   describe 'POST /stock_items/update' do
     describe 'when it has valid parameters' do
       context 'creating with correct attributes' do
-        let!(:product) {create(:product)}
-        let!(:store) {create(:store)}
+        let!(:product) { create(:product) }
+        let!(:store) { create(:store) }
 
         let!(:stock_item_attributes) do
           {
@@ -25,7 +24,7 @@ RSpec.describe 'StockItem', type: :request do
       end
 
       context 'adding with correct attributes' do
-        let!(:stock_item) {create(:stock_item, quantity: 10)}
+        let!(:stock_item) { create(:stock_item, quantity: 10) }
 
         let!(:stock_item_attributes) do
           {
@@ -45,7 +44,7 @@ RSpec.describe 'StockItem', type: :request do
       end
 
       context 'removing with correct attributes' do
-        let!(:stock_item) {create(:stock_item, quantity: 10)}
+        let!(:stock_item) { create(:stock_item, quantity: 10) }
 
         let!(:stock_item_attributes) do
           {
@@ -67,7 +66,7 @@ RSpec.describe 'StockItem', type: :request do
 
     describe 'when it has invalid parameters' do
       context 'creating with no product' do
-        let!(:store) {create(:store)}
+        let!(:store) { create(:store) }
 
         let!(:stock_item_attributes) do
           {
@@ -85,7 +84,7 @@ RSpec.describe 'StockItem', type: :request do
       end
 
       context 'creating with no store' do
-        let!(:product) {create(:product)}
+        let!(:product) { create(:product) }
 
         let!(:stock_item_attributes) do
           {
@@ -103,8 +102,8 @@ RSpec.describe 'StockItem', type: :request do
       end
 
       context 'when quantity is blank' do
-        let!(:product) {create(:product)}
-        let!(:store) {create(:store)}
+        let!(:product) { create(:product) }
+        let!(:store) { create(:store) }
 
         let!(:stock_item_attributes) do
           {
