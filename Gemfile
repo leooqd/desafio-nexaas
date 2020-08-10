@@ -9,13 +9,20 @@ gem 'puma', '~> 3.11'
 
 gem 'ransack'
 gem 'active_model_serializers', '~> 0.10.2'
-gem 'rack-cors'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
-
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  
+  gem "pry-rails"
+  gem "pry-byebug"
+  gem "better_errors"
+  gem 'rubocop', require: false
+  
+  # tests stuff
+  gem "factory_bot_rails"
+  gem "rspec-rails"
 end
 
 group :development do
