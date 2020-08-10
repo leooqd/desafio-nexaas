@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_08_10_035045) do
     t.integer "quantity", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["product_id", "store_id"], name: "index_stock_items_on_product_id_and_store_id", unique: true
     t.index ["product_id"], name: "index_stock_items_on_product_id"
     t.index ["store_id"], name: "index_stock_items_on_store_id"
   end

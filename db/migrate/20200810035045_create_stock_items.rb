@@ -9,5 +9,7 @@ class CreateStockItems < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+
+    add_index :stock_items, [:product_id, :store_id], unique: true
   end
 end
