@@ -1,3 +1,52 @@
+# Preparação
+
+### Requisitos: 
+
+1. Postgres 9.5
+2. Ruby 2.6.5
+3. Rails 5.2.4
+
+### Instalação
+
+Instale as gems  
+`bundle install`
+
+Crie o banco e rode as migrações 
+`rails db:create db:migrate`
+
+Para executar os testes
+`rspec spec`
+
+Iniciar o server
+`rails s`
+
+### Endpoints
+
+``Product, Store e StockItem``
+
+##### Produto
+
+`
+POST /products - criar
+PUT /products - alterar
+GET /products/:id - pesquisar
+DELETE /products/:id - deletar
+`
+
+`
+{
+  "product": {
+    "name": "string",
+    "description": "string",
+    "price": decimal,
+  }
+}
+`
+
+### Deploy
+
+
+
 # Desafio Nexaas para desenvolvedor(a) em Ruby
 
 Ficamos felizes que você tenha chegado nesta etapa do processo seletivo para desenvolvedor(a) em Ruby. Nosso desafio é a construção de uma API Rest, obrigatoriamente você deve implementar uma solução com Ruby (preferencialmente utilizando Rails).
@@ -6,8 +55,6 @@ Crie uma API Rest que faça o gerenciamento de estoque de loja. As entidades dev
 - Product: informações de produto (id, nome e preço de custo, por exemplo)
 - Store: Informações sobre a loja (id, nome e endereço, por exemplo)
 - StockItem: Deve relacionar uma loja a um produto e armazenar a quantidade de itens em estoque
-
-![Diagrama de domínio](assets/domain-diagram.png)
 
 As operações devem ser:
 - Cadastrar, alterar, excluir e pesquisar produto (apenas por ID) 
