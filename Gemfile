@@ -23,6 +23,7 @@ group :development, :test do
   # tests stuff
   gem "factory_bot_rails"
   gem "rspec-rails"
+  gem 'ffaker'
 end
 
 group :development do
