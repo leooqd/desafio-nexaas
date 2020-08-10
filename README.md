@@ -83,6 +83,7 @@ passar o :id do produto e da loja, a quantidade e o tipo de transação:
 
 ### Deploy
 
+https://desafio-nexaas.herokuapp.com/
 
 # Desafio Nexaas para desenvolvedor(a) em Ruby
 
