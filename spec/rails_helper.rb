@@ -21,7 +21,7 @@ RSpec.configure do |config|
 
   config.include FactoryBot::Syntax::Methods
 
-  config.include Requests::JsonHelpers, type: :request
+  # config.include Requests::JsonHelpers, type: :request
 
   config.infer_spec_type_from_file_location!
 
