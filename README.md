@@ -26,10 +26,13 @@ Iniciar o server
 
 ##### Produto
 
-`POST /products - criar`
-`PUT /products - alterar`
-`GET /products/:id - pesquisar`
-`DELETE /products/:id - deletar`
+
+```bash
+POST /products - criar
+PUT /products - alterar
+GET /products/:id - pesquisar
+DELETE /products/:id - deletar
+```
 
 `
 {
