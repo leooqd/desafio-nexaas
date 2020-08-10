@@ -32,6 +32,8 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+  rescue ActiveRecord::RecordNotFound => e
+    render json: {message: e.message}, status: :not_found
   end
 
   def product_params
