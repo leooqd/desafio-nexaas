@@ -28,6 +28,8 @@ class ProductsController < ApplicationController
     head 204
   end
 
+  private
+
   def set_product
     @product = Product.find(params[:id])
   rescue ActiveRecord::RecordNotFound => e
