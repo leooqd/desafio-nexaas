@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-
   before_action :set_product, only: %i[show update destroy]
 
   def show
@@ -29,17 +28,17 @@ class ProductsController < ApplicationController
     head 204
   end
 
-
   def set_product
     @product = Product.find(params[:id])
   rescue ActiveRecord::RecordNotFound => e
-    render json: {message: e.message}, status: :not_found
+    render json: { message: e.message }, status: :not_found
   end
 
   def product_params
     params.require(:product).permit(
-      :name, 
-      :description, 
-      :price)
+      :name,
+      :description,
+      :price
+    )
   end
 end
