@@ -22,8 +22,6 @@ Iniciar o server
 
 ### Endpoints
 
-``Product, Store e StockItem``
-
 #### Produto
 
 ```bash
@@ -38,10 +36,50 @@ DELETE /products/:id - deletar
   "product": {
     "name": "string",
     "description": "string",
-    "price": decimal,
+    "price": 1,
   }
 }
 ```
+
+#### Store
+
+```bash
+POST /stores - criar
+PUT /stores - alterar
+GET /stores/:id - pesquisar
+DELETE /stores/:id - deletar
+```
+
+```bash
+{
+  "store": {
+    "name": "string",
+    "address": "string"
+  }
+}
+```
+
+#### StockItem
+
+```bash
+POST /stock_item/update - criar, adicionar e remover
+```
+
+```bash
+{
+  "store": {
+    "product_id": 1,
+    "store_id": 1,
+    "quantity": 1,
+    "transaction": "string"
+  }
+}
+```
+
+passar o :id do produto e da loja, a quantidade e o tipo de transação:
+
+- `add` para criar ou adicionar 
+- `remove` para remover
 
 ### Deploy
 
