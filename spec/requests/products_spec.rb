@@ -78,8 +78,4 @@ RSpec.describe 'Products', type: :request do
       end.to change(Product, :count)
     end
   end
-
-  def json
-    JSON.parse(response.body)
-  end
 end
