@@ -1,6 +1,11 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[show update destroy]
 
+  def index
+    @products = Product.all.order('created_at desc')
+    render json: @products
+  end
+
   def show
     render json: @product
   end

@@ -1,6 +1,11 @@
 class StoresController < ApplicationController
   before_action :set_store, only: %i[show update destroy]
 
+  def index
+    @stores = Store.all.order('created_at desc')
+    render json: @stores
+  end
+
   def show
     render json: @store
   end

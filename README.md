@@ -12,7 +12,7 @@ Instale as gems
 `bundle install`
 
 Crie o banco e rode as migrações 
-`rails db:create db:migrate`
+`rails db:create db:migrate db:seed`
 
 Para executar os testes
 `rspec spec`
@@ -25,6 +25,7 @@ Iniciar o server
 #### Produto
 
 ```bash
+GET /products - listar
 POST /products - criar
 PUT /products - alterar
 GET /products/:id - pesquisar
@@ -44,6 +45,7 @@ DELETE /products/:id - deletar
 #### Store
 
 ```bash
+GET /stores - listar
 POST /stores - criar
 PUT /stores - alterar
 GET /stores/:id - pesquisar
